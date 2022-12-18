@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erlina's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <!-- Bagian Kiri/Logo Start -->
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6"
+              >&lt; Erlina / &gt;</a
+            >
+          </div>
+
+          <!-- Bagian Kiri/Logo End -->
+
+          <!-- Bagian Kanan Menu Navigasi Start-->
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="right-4 block absolute lg:hidden"
+            >
+              <span class="hamburger-line origin-top-left"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line origin-bottom-left"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:max-w-full lg:shadow-none lg:rounded-none lg:bg-transparent dark:bg-dark dark:shadow-slate-600 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-slate-100"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-slate-100"
+                    >About Me</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skills"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-slate-100"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#education"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-slate-100"
+                    >Education</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-slate-100"
+                    >Portfolio</a
+                  >
+                </li>
+                
+                <li class="flex items-center pl-8 mt-2 sm:mt-0">
+                  <div class="flex">
+                    <input type="checkbox" class="hidden" id="dark-toggle">
+                    <label for="dark-toggle">
+                      <div class="flex h-6 w-6 cursor-pointer items-center text-dark" id="toggle-icon">
+                        <i class="fa-solid fa-sun"></i>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Bagian Kanan Menu Navigasi End -->
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 dark:bg-dark">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <!-- Bagian tulisan kiri -->
+            <div class="w-full self-center px-4 lg:w-1/2">
+              <h1 class="text-base font-semibold text-primary md:text-xl">
+                Hello Fellas 👋, I'am
+                <span class="block font-bold text-4xl mt-1 lg:text-5xl text-dark dark:text-white"
+                  >Erlina Eka Fitriani</span
+                >
+              </h1>
+              <h2 class="font-medium text-slate-600 text-md mb-5 lg:text-2xl">
+                Fresh graduate of Information System |
+                <span class="text-primary">Web Developer</span>
+              </h2>
+              <p class="font-medium text-slate-600 mb-10 leading-relaxed text-lg">
+                I am a fresh graduate with a bachelor’s degree of
+                <span class="font-semibold text-primary">Information Systems</span>.
+                I have work experience as a admin data task force at PT. Surya
+                Madistrindo (Subsidiary of PT. Gudang Garam Tbk).
+              </p>
+  
+              <a
+                href="erlinaeka6@gmail.com"
+                class="button-primary"
+                >Contact Me</a
+              >
+            </div>
+            <!-- End Bagian tulisan kiri -->
+  
+            <!-- Bagian gambar kanan -->
+            <div class="w-full self-end px-4 lg:w-1/2">
+              <div class="mt-10 relative lg:mt-0 lg:right-0 mx-auto">
+                <img
+                  src="./public/img/hero-animation.png"
+                  alt="animasi-erlina"
+                  class="scale-70 max-w-full scale-90 mx-auto relative z-10"/>
+                <!-- <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                  <svg
+                    width="400"
+                    height="400"
+                    viewBox="0 0 200 200"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill="#4338ca"
+                      d="M37.2,-41.3C51.3,-32.4,68.1,-23.7,72.6,-11C77,1.8,69,18.5,58.9,32C48.7,45.6,36.4,55.9,21.1,64.2C5.8,72.4,-12.5,78.6,-25.9,72.9C-39.3,67.3,-47.7,49.9,-58.3,33C-68.8,16.1,-81.5,-0.2,-79.9,-15C-78.4,-29.8,-62.8,-43,-47.1,-51.5C-31.4,-60.1,-15.7,-64.1,-2.1,-61.6C11.5,-59.1,23,-50.1,37.2,-41.3Z"
+                      transform="translate(100 100)"/>
+                  </svg>
+                </span> -->
+              </div>
+            </div>
+            <!-- End Bagian gambar kanan -->
+          </div>
+        </div>
+    </section>
+      <!-- End Hero Section Start -->
+     
+    <!-- About Me Section Start-->
+    <section id="about" class="pt-28 pb-20 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full text-center font-extrabold text-3xl lg:text-4xl mb-5 lg:mb-10" data-aos="fade-down" data-aos-duration="500">
+                    <i class="fa-solid fa-user inline-block fa-sm dark:text-primary"></i>
+                    <h2 class="font-extrabold inline-block dark:text-primary text-slate-800">About 
+                        <span class="text-primary dark:text-secondary">Me</span>
+                    </h2>
+                </div>
+                <div class="w-full self-start px-4 lg:w-1/2" data-aos="fade-down" data-aos-duration="1500">
+                    <div class="mt-10 relative lg:mt-0 lg:right-0 mx-auto">
+                      <img
+                        src="./public/img/about-section.png"
+                        alt="animasi-erlina"
+                        class="scale-70 max-w-full scale-90 mx-auto relative z-10"/>
+                      <!-- <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                        <svg
+                          width="400"
+                          height="400"
+                          viewBox="0 0 200 200"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            fill="#4338ca"
+                            d="M37.2,-41.3C51.3,-32.4,68.1,-23.7,72.6,-11C77,1.8,69,18.5,58.9,32C48.7,45.6,36.4,55.9,21.1,64.2C5.8,72.4,-12.5,78.6,-25.9,72.9C-39.3,67.3,-47.7,49.9,-58.3,33C-68.8,16.1,-81.5,-0.2,-79.9,-15C-78.4,-29.8,-62.8,-43,-47.1,-51.5C-31.4,-60.1,-15.7,-64.1,-2.1,-61.6C11.5,-59.1,23,-50.1,37.2,-41.3Z"
+                            transform="translate(100 100)"/>
+                        </svg>
+                      </span> -->
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 self-center mt-10 lg:mt-0" data-aos="fade-down">
+                    <h3 class="text-2xl lg:text-3xl font-bold dark:text-white"  data-aos-duration="1700">I'am Erlina</h3>
+                    <h2 class="text-lg lg:text-xl font-bold dark:text-white"  data-aos-duration="1500">Web Developer</h2>
+                    <p class="mt-5 mb-5 text-base lg:text-md text-slate-600"  data-aos-duration="1000">I have experience as a web developer intern at Dinas Perumahan Rakyat, Kawasan Permukiman dan Cipta Karya Provinsi Jawa Timur and fullstack web developer student at Binar Academy. My key responsibilities are creating web applications using Laravel and creating Restful API using Node JS. I have an interest in web development and RESTful API. I am also proficient in using Microsoft Office</p>
+                    <div class="flex items-center mb-8">
+                        <!--Gmail -->
+                        <a
+                          href="erlinaeka6@gmail.com"
+                          target="_blank"
+                          class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                          <svg
+                            width="20"
+                            role="img"
+                            class="fill-current"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <title>Gmail</title>
+                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                          </svg>
+                        </a>
+                        <!-- End Gmail -->
+          
+                        <!-- Linkedin -->
+                        <a
+                          href="https://www.linkedin.com/in/erlina-eka-fitriani-066a1a1b5/"
+                          target="_blank"
+                          class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                          <svg
+                            width="20"
+                            role="img"
+                            class="fill-current"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <title>Linkedin</title>
+                            <path
+                              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                            />
+                          </svg>
+                        </a>
+                        <!-- End Linkedin -->
+
+                        
+                        <!-- Github -->
+                        <a
+                          href="https://github.com/erlinaeka"
+                          target="_blank"
+                          class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                          <svg
+                            width="20"
+                            role="img"
+                            class="fill-current"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <title>Github</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                          </svg>
+                        </a>
+                        <!-- End Github -->
+                  
+                        <!-- Gitlab -->
+                        <a
+                          href="https://gitlab.com/erlinaeka"
+                          target="_blank"
+                          class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                          <svg
+                            width="20"
+                            role="img"
+                            class="fill-current"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <title>GitLab</title>
+                            <path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/>
+                          </svg>
+                        </a>
+                        <!-- End GItlab -->
+                    </div>
+                    <a
+                    href="https://drive.google.com/file/d/1YJ9RIZ5bexeUG1IajVkMgNiUSemOdkAR/view?usp=sharing"
+                    class="mt-8 button-primary"
+                    >Curriculum Vitae</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Me Section Start-->
+
+    <!-- Skills Section Start -->
+    <section id="skills" class="py-14 bg-indigo-900">
+      <div class="container">
+        <div class="w-full text-center font-extrabold text-3xl lg:text-4xl mb-5 lg:mb-10" data-aos="fade-down" data-aos-duration="1000">
+          <i class="fa-solid fa-laptop-code inline-block fa-sm text-white"></i>
+          <h2 class="font-extrabold inline-block text-white">
+            Skills & <span class="text-secondary">Abilities</span> 
+          </h2>
+        </div>
+  
+        <div class="flex flex-wrap mx-auto bg-indigo-800 max-w-6xl rounded-xl px-6 py-4 brightness-65" data-aos="fade-down" data-aos-duration="1000">
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/html.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="html5">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">HTML5</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/css3.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="css3">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">CSS3</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/javascript.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="javascript">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">JavaScript</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/php.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="php">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">PHP</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/python.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="python">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Python</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/sass.png" class="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] mx-auto mb-1" alt="sass">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Sass</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/bootstrap.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="bootstrap"/>
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Bootstrap</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/tailwindcss.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="tailwindcss">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">TailwindCSS</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/laravel.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="laravel">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Laravel</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/codeigniter.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="codeigniter">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Codeigniter</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/nodejs.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="nodejs">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">NodeJS</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-left" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/expressjs.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="expressjs">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">ExpressJS</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/mysql.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="mysql">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">MySQL</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills//postgresql.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="postgresql">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">PostgreSQL</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/mongodb.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="mongodb">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">MongoDB</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/detabase.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="detabase">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">DetaBase</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000"> 
+              <img src="./public/img/logo_skills/git.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="git">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Git</h1>
+            </div>
+          </div>
+
+          <div class="w-1/2 px-4 lg:w-1/6">
+            <div class="bg-dark rounded-xl mb-6 py-4 hover:bg-black hover:shadow-lg hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./public/img/logo_skills/swagger.png" class="w-[65px] h-[65px] mx-auto mb-1" alt="swagger">
+              <h1 class="text-center text-white lg:text-lg font-bold tracking-wider">Swagger</h1>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Portofolio Section Start -->
+    <section id="portfolio" class="py-14 dark:bg-slate-800">
+      <div class="container">
+        
+        <div class="w-full text-center font-extrabold text-3xl lg:text-4xl mb-5 lg:mb-10 text-slate-800 dark:text-white" data-aos="fade-down">
+          <i class="fa-solid fa-laptop-code inline-block fa-sm"></i>
+          <h2 class="font-extrabold inline-block">Porfolio</span> 
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark dark:shadow-slate-500  shadow-slate-400 rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="./public/img/portfolio/project-1.PNG" alt="keyboard" class="p-4 rounded-xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="#" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">SecondHand RESTful API</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">NodeJS</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">ExpressJS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Swagger</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">DetaBase</p>
+                </div>
+                <a href="#" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark dark:shadow-slate-400  shadow-slate-400 rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="./public/img/portfolio/project-2.PNG" alt="keyboard" class="p-4 rounded-xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://pucktr.jatimprov.go.id/" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Official Website Dinas Perumahan Rakyat Jawa Timur</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Laravel</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">TailwindCSS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">MySQL</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">AOS</p>
+                </div>
+                <a href="https://pucktr.jatimprov.go.id/" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Visit Web</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark dark:shadow-slate-400  shadow-slate-400 rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="./public/img/portfolio/project-generate-surat.PNG" alt="keyboard" class="p-4 rounded-xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://github.com/erlinaeka/Web-Development_Erlina-Eka-Fitriani" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Generate Surat</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Laravel</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Bootstrap</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">MySQL</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">jquery</p>
+                </div>
+                <a href="https://github.com/erlinaeka/Web-Development_Erlina-Eka-Fitriani" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark rounded-xl shadow-lg dark:shadow-slate-500  shadow-slate-400 overflow-hidden mb-10 ">
+              <img src="./public/img/portfolio/project-3.PNG" alt="keyboard" class="p-4 rounded-2xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://gitlab.com/erlinaeka/responsive-binar-rental-car-erlina-eka-f" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Landing Page Binar Rental Car</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">HTML</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">CSS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Bootstrap</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Javascript</p>
+                </div>
+                <a href="https://gitlab.com/erlinaeka/responsive-binar-rental-car-erlina-eka-f" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark rounded-xl shadow-lg dark:shadow-slate-500  shadow-slate-400 overflow-hidden mb-10 ">
+              <img src="./public/img/portfolio/project-4.PNG" alt="keyboard" class="p-4 rounded-2xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://gitlab.com/erlinaeka/erlina-eka-challenge-6-fullstackweb-binar-academy" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">RESTful Binar Car</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">NodeJS</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">ExpressJS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">PostgreSQL</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Swagger</p>
+                </div>
+                <a href="https://gitlab.com/erlinaeka/erlina-eka-challenge-6-fullstackweb-binar-academy" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark rounded-xl shadow-lg dark:shadow-slate-500  shadow-slate-400 overflow-hidden mb-10 ">
+              <img src="./public/img/portfolio/project-5.PNG" alt="keyboard" class="p-4 rounded-2xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://gitlab.com/erlinaeka/car-management-dashboard-erlina-eka-fitriani#" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Dashboard Binar Car</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">NodeJS</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">ExpressJS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">PostgreSQL</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">ejs</p>
+                </div>
+                <a href="https://gitlab.com/erlinaeka/car-management-dashboard-erlina-eka-fitriani" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark rounded-xl shadow-lg dark:shadow-slate-500  shadow-slate-400 overflow-hidden mb-10 ">
+              <img src="./public/img/portfolio/project-6.PNG" alt="keyboard" class="p-4 rounded-2xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://github.com/erlinaeka/Sinaw" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Landing Page Sinaw</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">HTML</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">CSS</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Javascript</p>
+                </div>
+                <a href="https://github.com/erlinaeka/Sinaw" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-duration="1000">
+            <div class="bg-white dark:bg-slate-700 hover:dark:bg-dark rounded-xl shadow-lg dark:shadow-slate-500 shadow-slate-600 overflow-hidden mb-10 ">
+              <img src="./public/img/portfolio/project-7.PNG" alt="keyboard" class="p-4 rounded-2xl">
+              <div class="pt-4 pb-8 px-6">
+                <h3 class="">
+                  <a href="https://github.com/erlinaeka/ramenichi" class="block font-semibold text-xl text-dark dark:text-white hover:text-primary dark:hover:text-secondary truncate">Landing Page Ramen</a>
+                </h3>
+                <div class="flex flex-wrap my-6 gap-2">
+                  <p class="block bg-orange-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">HTML</p>
+                  <p class="block bg-green-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">CSS</p>
+                  <p class="block bg-red-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Bootstrap</p>
+                  <p class="block bg-blue-100 py-1 px-3 text-xs font-semibold rounded-full tracking-wider text-slate-700">Javascript</p>
+                </div>
+                <a href="https://github.com/erlinaeka/ramenichi" class="font-medium text-sm text-white bg-primary py-3 px-10 rounded-full hover:opacity-80 tracking-wider">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Portofolio Section End -->
+
+    <!-- Footer Section Start -->
+    <section class="bg-dark pt-16 pb-6">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <!-- Bagian 1 start -->
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+            <h2 class="font-bold text-2xl text-white mb-5">Erlina's Portofolio</h2>
+            <p class="block max-w-[300px]">Thank's for visiting my personal website 🤞, connect with me over sosials.</p>
+            <div class="flex items-center mt-6">
+              <!--Gmail -->
+              <a
+                href="erlinaeka6@gmail.com"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  width="20"
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Gmail</title>
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                </svg>
+              </a>
+              <!-- End Gmail -->
+
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/in/erlina-eka-fitriani-066a1a1b5/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  width="20"
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Linkedin</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <!-- End Linkedin -->
+
+              
+              <!-- Github -->
+              <a
+                href="https://github.com/erlinaeka"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  width="20"
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Github</title>
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+              </a>
+              <!-- End Github -->
+        
+              <!-- Gitlab -->
+              <a
+                href="https://gitlab.com/erlinaeka"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  width="20"
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>GitLab</title>
+                  <path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/>
+                </svg>
+              </a>
+              <!-- End GItlab -->
+
+            </div>
+          </div>
+          <!-- Bagian 1 end -->
+
+          <!-- Bagian 2 Start -->
+
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-4">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="hover:text-primary mb-3">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="hover:text-primary mb-3">About Me</a>
+              </li>
+              <li>
+                <a href="#skills" class="hover:text-primary mb-3">Skills</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="hover:text-primary mb-3">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Bagian 2 End -->
+
+          <!-- Bagian 3 start -->
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-4">Contact Info</h3>
+            <div class="flex flex-wrap">
+              <div class="w-full mb-2">
+                <i class="fa-solid fa-phone text-secondary"></i><p class="text-white text-sm font-light inline-block tracking-widest ml-3">085736901833</p>
+              </div>
+              <div class="w-full mb-2">
+                <i class="fa-solid fa-envelope text-secondary"></i><p class="text-white text-sm inline-block ml-3 ">erlinaeka6@gmail.com</p>   
+              </div>
+              <div class="w-full mb-2">
+                <i class="fa-solid fa-location-dot text-secondary"></i><p class="text-white text-sm inline-block ml-3 ">Bojonegoro, Jawa Timur</p>   
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian 3 end -->
+        </div>
+
+        <!-- Bagian CopyRight Start -->
+        <div class="w-full pt-4 border-t border-slate-700">
+          <p class="font-medium text-xs text-slate-500 text-center">Dibuat dengan <span class="text-pink-500">❤</span> oleh <a href="#" class="font-bold text-primary" target="_blank">Erlina Eka</a> , menggunakan <a href="https://tailwindcss.com" class="font-bold text-sky-500" target="_blank">Tailwind CSS</a> </p>
+        </div>
+        <!-- Bagian Copyright end -->
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Back to Top Start -->
+    <a href="#home" id="to-top" class="hidden w-14 h-14 bg-secondary rounded-full fixed z-[9999] bottom-8 right-8 items-center justify-center hover:animate-pulse">
+      <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2 border-dark"></span>
+    </a>
+    <!-- Back to Top End -->
+
+    <script src="./public/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
